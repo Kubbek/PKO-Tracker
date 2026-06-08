@@ -284,6 +284,7 @@ export default function TDView({ tournament, onRefresh, onLogout }) {
   }
 
   async function confirmElim(winnerId, loserId) {
+    try {
     const wid = winnerId ?? selectedWinner, lid = loserId ?? selectedLoser
     if (!wid || !lid || wid === lid) { show('Wybierz dwóch graczy'); return }
     if (elimLock.current) return; elimLock.current = true
@@ -297,6 +298,10 @@ export default function TDView({ tournament, onRefresh, onLogout }) {
     ])
     show(`+${split.pocket} zł do kieszeni`)
     setSelectedWinner(null); setSelectedLoser(null); winnerRef.current = null; elimLock.current = false; onRefresh()
+  } catch(err) {
+    show('Błąd zapisu – spróbuj ponownie')
+    setSelectedWinner(null); setSelectedLoser(null); winnerRef.current = null; elimLock.current = false
+  }
   }
 
   async function undoLastElim() {

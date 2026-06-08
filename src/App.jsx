@@ -78,7 +78,7 @@ export default function App() {
 
   if (loading) return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', flexDirection: 'column', gap: 12 }}>
-      <div style={{ fontFamily: 'Cinzel, serif', fontSize: 24, color: 'var(--gold-light)' }}>PKO Tracker</div>
+      <div style={{ fontFamily: 'var(--header-font, Cinzel, serif)', fontSize: 24, color: 'var(--accent)' }}>PKO Tracker</div>
       <div style={{ color: 'var(--text2)', fontSize: 14 }}>Łączenie z bazą...</div>
     </div>
   )

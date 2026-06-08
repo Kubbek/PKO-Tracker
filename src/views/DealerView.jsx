@@ -41,7 +41,7 @@ export default function DealerView({ tournament, onRefresh, onLogout, tableNum }
     const split = chipSplit(loser.bounty, tournament.min_chip)
     await Promise.all([
       supabase.from('players').update({ bounty: r2(winner.bounty + split.onHead), pocket_bounty: r2(winner.pocket_bounty + split.pocket) }).eq('id', winner.id),
-      supabase.from('players').update({ active: false, bounty: 0, elim_by: winner.name, place: tablePlayers.length }).eq('id', loser.id),
+      supabase.from('players').update({ active: false, bounty: 0, elim_by: winner.name, place: players.filter(p => p.active).length }).eq('id', loser.id),
       supabase.from('eliminations').insert({ tournament_id: tournament.id, winner_id: winner.id, loser_id: loser.id, winner_name: winner.name, loser_name: loser.name, pocket: split.pocket, on_head: split.onHead, loser_bounty_before: loser.bounty })
     ])
     show(`${winner.name} → +${split.pocket} zł`)
