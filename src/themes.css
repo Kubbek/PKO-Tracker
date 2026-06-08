@@ -1,0 +1,65 @@
+/* ═══════════════════════════════════════════════
+   THEME 1: NEON AMBER (default, dark)
+   ═══════════════════════════════════════════════ */
+[data-theme="amber"] {
+  --bg:#090b0e; --bg2:#0f1318; --bg3:#141921; --bg4:#1a2030;
+  --panel:#111620; --felt:#0a1a10;
+  --accent:#f5a623; --accent2:#ffc145; --accent-dim:#a86d10;
+  --accent-bg:rgba(245,166,35,0.08); --accent-border:rgba(245,166,35,0.25);
+  --green:#00d084; --green-bg:rgba(0,208,132,0.08);
+  --red:#ff4d6d;   --red-bg:rgba(255,77,109,0.08);
+  --text:#eef0f4;  --text2:#7a8399; --text3:#3d4560;
+  --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.12);
+  --header-font:'Rajdhani',sans-serif;
+  --logo-size:22px; --logo-spacing:2px;
+  --body-bg:radial-gradient(ellipse 80% 60% at 50% 0%, #1a1200 0%, #090b0e 60%);
+  --seat-bg:#0f1318; --seat-bg-occ:#141921;
+  --felt-bg:#0a1a10; --felt-radius:18px;
+  --stat-radius:12px;
+}
+
+/* ═══════════════════════════════════════════════
+   THEME 2: WHITE / LIGHT
+   ═══════════════════════════════════════════════ */
+[data-theme="light"] {
+  --bg:#ffffff; --bg2:#f5f5f4; --bg3:#f0ede8; --bg4:#e8e4de;
+  --panel:#ffffff; --felt:#1a3a1a;
+  --accent:#1a1208; --accent2:#3d2b00; --accent-dim:#8B5E17;
+  --accent-bg:rgba(139,94,23,0.08); --accent-border:rgba(139,94,23,0.25);
+  --green:#1a6e3a; --green-bg:rgba(26,110,58,0.08);
+  --red:#b91c1c;   --red-bg:rgba(185,28,28,0.08);
+  --text:#1a1208;  --text2:#6b5e3a; --text3:#9e8a6a;
+  --border:rgba(0,0,0,0.10); --border2:rgba(0,0,0,0.20);
+  --header-font:'Georgia','Times New Roman',serif;
+  --logo-size:20px; --logo-spacing:1px;
+  --body-bg:#f0ede8;
+  --seat-bg:#f0ede8; --seat-bg-occ:#ffffff;
+  --felt-bg:#1a3a1a; --felt-radius:40px;
+  --stat-radius:8px;
+}
+[data-theme="light"] .stat-card { background:#ffffff; }
+[data-theme="light"] .log-entry { border-left-color:rgba(139,94,23,0.4); }
+[data-theme="light"] .player-row:hover { background:var(--bg3); }
+
+/* ═══════════════════════════════════════════════
+   THEME 3: MEGA POKER (dark teal + metallic gold)
+   ═══════════════════════════════════════════════ */
+[data-theme="mega"] {
+  --bg:#060d12; --bg2:#0b1520; --bg3:#0f1e2e; --bg4:#162437;
+  --panel:#0b1520; --felt:#071510;
+  --accent:#c8a84b; --accent2:#e8cc7a; --accent-dim:#7a6020;
+  --accent-bg:rgba(200,168,75,0.08); --accent-border:rgba(200,168,75,0.3);
+  --green:#1fc8a0; --green-bg:rgba(31,200,160,0.08);
+  --red:#e05060;   --red-bg:rgba(224,80,96,0.08);
+  --text:#d8e8f0;  --text2:#5a7a90; --text3:#2a4050;
+  --border:rgba(200,168,75,0.10); --border2:rgba(200,168,75,0.22);
+  --header-font:'Georgia','Times New Roman',serif;
+  --logo-size:20px; --logo-spacing:3px;
+  --body-bg:radial-gradient(ellipse 100% 80% at 50% 0%, #0a1a28 0%, #060d12 70%);
+  --seat-bg:#0b1520; --seat-bg-occ:#0f1e2e;
+  --felt-bg:#071510; --felt-radius:18px;
+  --stat-radius:10px;
+}
+[data-theme="mega"] .seat-cell.occupied { border-color:rgba(200,168,75,0.25); }
+[data-theme="mega"] .log-entry { border-left-color:var(--accent-dim); }
+[data-theme="mega"] .tab-btn.active { background:rgba(200,168,75,0.08); color:var(--accent2); }
